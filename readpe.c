@@ -6,7 +6,7 @@ void error_func(char *msg) {
   exit(1);
 }
 
-void isPE(const unsigned char buffer[32]) {
+void isPE(const unsigned char *buffer) {
 
   if(buffer[0] != 'M' || buffer[1] != 'Z'){
     printf("This file is NOT a PE\n");
