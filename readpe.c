@@ -43,6 +43,8 @@ void open_file(char *file_name){
   printf("\nUsage: \n\t File: <%s>\n", file_name);
 
   read_file(fh);  // This func also calls isPE()
+
+  fclose(fh);
 }
 
 
