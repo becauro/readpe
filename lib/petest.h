@@ -1,0 +1,1 @@
+void isPE(const unsigned char *buffer);
