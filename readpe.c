@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lib/petest.h" // For Windows this code works without back slash (\)
+#include "lib/petest.h" // That is compiled even it is not back slash (\)
 
 void error_func(char *msg) {
   fprintf(stderr, "Error: %s\n", msg);
