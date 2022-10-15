@@ -6,6 +6,20 @@ void error_func(char *msg) {
   exit(1);
 }
 
+
+void read_file(FILE *file_stream){
+  unsigned char buffer[32];
+
+  int read_result = fread(buffer, 32, 1, file_stream);
+
+  if (read_result != 1) {
+    printf("The file content 32 bytes cannot be read");
+    exit(1);
+  }
+
+  printf("Successful file read");
+}
+
 void open_file(char *file_name){
 
   FILE *fh;
@@ -16,7 +30,11 @@ void open_file(char *file_name){
     error_func("Ops! It seems the file cannot be read!");
   
   printf("Usage: \n\t readpe <%s>\n", file_name);
+
+  read_file(fh);
 }
+
+
 
 void usage_func(char *file_name) {
 
