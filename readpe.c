@@ -38,7 +38,7 @@ void open_file(char *file_name){
 
 void usage_func(char *file_name) {
 
-  open_file(file_name);
+  open_file(file_name); // This func also calls read_file() func
 }
 
 int main(int argc, char *argv[]) {
