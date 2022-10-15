@@ -8,15 +8,21 @@ void error_func(char *msg) {
 
 void usage_func(char *file_name) {
 
+  FILE *fh;
+
+  fh = fopen(file_name, "rb");
+
+  if(fh == NULL)
+    error_func("Ops! It seems the file cannot be read!");
+  
   printf("Usage: \n\t readpe <%s>\n", file_name);
-  exit(1);
+  // exit(1);
 }
 
 int main(int argc, char *argv[]) {
 
-  FILE *fh;
   if (argc != 2) {
-    error_func("Something get wrong");
+    error_func("Missing file name!");
   }
 
   usage_func(argv[1]);
