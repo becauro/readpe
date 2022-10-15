@@ -2,7 +2,7 @@
 
 This project is small program to read a binary file and indentify if this is a PE binary.
 
-For now the, since I am not using a build / compiler software like CMake, most thing need to be done MANUALLY since compiling to moved libraries to proper folder in the Operation System, whether it is GNU/Linux or not.
+For now, since I am not using tools like make or CMake like, most thing need to be done MANUALLY, from compiling to moved libraries to proper folder in the Operation System, whether it is GNU/Linux or not.
 
 
 # Libraries
@@ -25,7 +25,7 @@ If you use GCC compiler, the following CLI commands are proper to compile the *'
 
 ## Library Local
 
-Once one library is compiled, the Operation System local where must to be moved this library for depends on Operation System used to compiling.
+Once one library is compiled, the place to move libraries depends on Operation System used to compiling.
 
 
 ### for Windows
