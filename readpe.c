@@ -10,9 +10,9 @@ void error_func(char *msg) {
 void read_file(FILE *file_stream){
   unsigned char buffer[32];
 
-  int read_result = fread(buffer, 32, 1, file_stream);
+  int reading_result = fread(buffer, 32, 1, file_stream);
 
-  if (read_result != 1) {
+  if (reading_result != 1) {
     printf("The file content 32 bytes cannot be read");
     exit(1);
   }
