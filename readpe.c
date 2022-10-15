@@ -6,7 +6,7 @@ void error_func(char *msg) {
   exit(1);
 }
 
-void usage_func(char *file_name) {
+void open_file(char *file_name){
 
   FILE *fh;
 
@@ -16,7 +16,11 @@ void usage_func(char *file_name) {
     error_func("Ops! It seems the file cannot be read!");
   
   printf("Usage: \n\t readpe <%s>\n", file_name);
-  // exit(1);
+}
+
+void usage_func(char *file_name) {
+
+  open_file(file_name);
 }
 
 int main(int argc, char *argv[]) {
