@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "lib/petest.h" // For Windows this code works without back slash (\)
 
 void error_func(char *msg) {
   fprintf(stderr, "Error: %s\n", msg);
   exit(1);
 }
 
-void isPE(const unsigned char *buffer) {
+// void isPE(const unsigned char *buffer) {
 
-  if(buffer[0] != 'M' || buffer[1] != 'Z'){
-    printf("This file is NOT a PE\n");
-    exit(1);
-  }
+//   if(buffer[0] != 'M' || buffer[1] != 'Z'){
+//     printf("This file is NOT a PE\n");
+//     exit(1);
+//   }
 
-  printf("This is a PE file\n");
+//   printf("This is a PE file\n");
   
-}
+// }
 
 void read_file(FILE *file_stream){
   unsigned char buffer[32];

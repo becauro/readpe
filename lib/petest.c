@@ -1,4 +1,6 @@
-#include <stdio.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+#include "petest.h" // This import already brings the above libraries includes
 
 void isPE(const unsigned char *buffer) {
 
