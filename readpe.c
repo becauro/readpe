@@ -29,7 +29,7 @@ void open_file(char *file_name){
   if(fh == NULL)
     error_func("Ops! It seems the file cannot be read!");
   
-  printf("Usage: \n\t readpe <%s>\n", file_name);
+  printf("Usage: \n\t File: <%s>\n", file_name);
 
   read_file(fh);
 }
