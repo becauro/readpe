@@ -17,7 +17,7 @@ void read_file(FILE *file_stream){
     exit(1);
   }
 
-  printf("Successful file read");
+  printf("file read Successful");
 }
 
 void open_file(char *file_name){
