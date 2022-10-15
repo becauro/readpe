@@ -6,6 +6,12 @@ void error_func(char *msg) {
   exit(1);
 }
 
+void usage_func(char *file_name) {
+
+  printf("Usage: \n\t readpe <%s>\n", file_name);
+  exit(1);
+}
+
 int main(int argc, char *argv[]) {
 
   FILE *fh;
@@ -13,7 +19,7 @@ int main(int argc, char *argv[]) {
     error_func("Something get wrong");
   }
 
-  printf("That worked. The file name is: %s\n", argv[1]);
+  usage_func(argv[1]);
   return 0;
 
 }
