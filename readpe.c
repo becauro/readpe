@@ -42,14 +42,14 @@ void open_file(char *file_name){
   
   printf("\nUsage: \n\t File: <%s>\n", file_name);
 
-  read_file(fh);
+  read_file(fh);  // This func also calls isPE()
 }
 
 
 
 void usage_func(char *file_name) {
 
-  open_file(file_name); // This func also calls read_file() func
+  open_file(file_name); // This func also calls read_file()
 }
 
 int main(int argc, char *argv[]) {
