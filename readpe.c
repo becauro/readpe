@@ -6,6 +6,16 @@ void error_func(char *msg) {
   exit(1);
 }
 
+void isPE(unsigned char buffer[32]) {
+
+  if(buffer[0] != 'M' || buffer[1] != 'Z'){
+    printf("This file is NOT a PE\n");
+    exit(1);
+  }
+
+  printf("This is a PE file\n");
+  
+}
 
 void read_file(FILE *file_stream){
   unsigned char buffer[32];
@@ -13,11 +23,12 @@ void read_file(FILE *file_stream){
   int reading_result = fread(buffer, 32, 1, file_stream);
 
   if (reading_result != 1) {
-    printf("The file content 32 bytes cannot be read");
+    printf("The file 32 bytes content cannot be read");
     exit(1);
   }
 
-  printf("file read Successful");
+  printf("\nFile read successful\n");
+  isPE(buffer);
 }
 
 void open_file(char *file_name){
@@ -27,9 +38,9 @@ void open_file(char *file_name){
   fh = fopen(file_name, "rb");
 
   if(fh == NULL)
-    error_func("Ops! It seems the file cannot be read!");
+    error_func("\nOps! It seems the file cannot be read!\n");
   
-  printf("Usage: \n\t File: <%s>\n", file_name);
+  printf("\nUsage: \n\t File: <%s>\n", file_name);
 
   read_file(fh);
 }
