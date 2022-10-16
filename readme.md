@@ -1,9 +1,10 @@
 # ReadPE project
 
-This project is small program to read a binary file and indentify if this is a PE binary.
+This project is small program to read a binary file and indentify if this is a PE (Portable Executable) binary.
 
-For now, since I am not using tools like make or CMake like, most thing need to be done MANUALLY, from compiling to moved libraries to proper folder in the Operation System, whether it is GNU/Linux or not.
+For now, since Make compiling implementation is not get done yet, most thing need to be done MANUALLY, from compiling to moved libraries to proper Operation System folder, whether it is GNU/Linux or not.
 
+Actually the Make implementation is a work in progress, because I want it works cross-platform.
 
 # Libraries
 
