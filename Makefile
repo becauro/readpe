@@ -1,7 +1,6 @@
 OSFLAG :=
 BIN_EXT :=
 LIB_EXT :=
-
 OS_LIB_LOCAL :=
 
 ifeq ($(OS),Windows_NT)
@@ -21,9 +20,18 @@ all: lib/libpetest$(LIB_EXT)
 	@echo Software COMPILED successfully
 
 lib/libpetest$(LIB_EXT):
-
 	make -C lib
 
 install:
 	make install -C lib
 	@echo Software INSTALLED successfully
+
+clear:
+	[TO DO]
+	@echo Software CLEAN successfully
+
+uninstall:
+	[TO DO]
+	@echo Software UNINSTALLED successfully
+
+

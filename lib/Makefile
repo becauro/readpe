@@ -1,6 +1,5 @@
 OSFLAG :=
 LIB_EXT :=
-
 OS_LIB_LOCAL :=
 Move_LB_To_OS_Folder :=
 
@@ -26,3 +25,11 @@ all:
 install: 
 	$(Move_LB_To_OS_Folder)
 	@echo Library INSTALLED successfully
+
+clear:
+	[TO DO]
+	@echo Library CLEAN successfully
+
+uninstall:
+	[TO DO]
+	@echo Library UNINSTALLED successfully
