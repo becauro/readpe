@@ -4,7 +4,7 @@ This project is small program to read a binary file and indentify if this is a P
 
 For now, since Make compiling implementation is totally finished yet, you can MANUALLY compiling the code by take the following instructs.
 
-**Note**: Theses Makefile were tested only in Windows and GNU/Linux (Debian Like) Operation Systems.
+**Note**: Theses project was tested only in Windows and GNU/Linux (Debian 'like') Operation Systems. But I think is not so hard to build under/for other Unix 'like' Operation Systems, like MacOS for example.
 
 
 # How to use the software
@@ -142,3 +142,15 @@ To *compile* and *install* this software, just type:
 To *clear* and *uninstall* this software, just type:
 
   `make uninstall`
+
+
+# Other informations
+
+The readpe_libless means the same project without library.
+For now that is here but I intend move to a separate repositoty soon. Ignore it please.
+
+-------
+
+Feel free to contribute with this project. 
+
+Thank you :-)
