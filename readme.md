@@ -27,10 +27,13 @@ For example, for verify if putty.exe is a PE file, type:
 `./readpe putty.exe` 
 
 
-# Compilation/install manually
+# Compile/Install/Clear/Uninstall manually
+
+In this section, we gonna consider Compile/Install/Clear/Uninstall procedures by use 'gcc' tools, however feel free to use your favorite IDE or other tools to achieve that.
 
 **Prerequisites**: You need only 'gcc' tools installed in your build machine. If you use Windows OS, I suggest you achieve that by use [MinGw](https://pt.wikipedia.org/wiki/MinGW) framework; It also works if you have [Cygwin](https://pt.wikipedia.org/wiki/Cygwin) installed.
-However feel free to use your favorite IDE tool to compile that if you wish.
+
+With prerequisites in place, you can Compile/Install/Clear/Uninstalls manually as following.
 
 ## Libraries Compilation
 
@@ -79,13 +82,16 @@ However, make sure that you already compiled the petest library and put it insid
 This install happen automatically when the library is installed
 
 
-# Compilation/install automatically
+# Compile/Install/Clear/Uninstall automatically
 
-Considering 'make' tool is present in your build machine, this can done by two ways: 1 - By use Makefile (like most projects) 2 - By use OneClickMake (Quick way).
+In this section, we gonna consider Compile/Install/Clear/Uninstall procedures by use 'make' and 'gcc' tools, however feel free to use your favorite IDE or other tools to achieve that.
 
 **Prerequisites**: You need the 'make' and 'gcc' tools installed in your build machine. If you use Windows OS, I suggest you achieve that by use [MinGw](https://pt.wikipedia.org/wiki/MinGW) framework; It also works if you have [Cygwin](https://pt.wikipedia.org/wiki/Cygwin) installed.
-However feel free to use your favorite IDE tools if you wish.
 
+
+**Note**: If you are using Windows OS as build machine, I suggest you rename the 'make' tools binary for call it 'make'. This avoid error, once Makefile commands use make tools by invock it by use 'make' word.
+
+With prerequisites in place, you can Compile/Install/Clear/Uninstalls automatically by two ways: 1 - By use Makefile (like most projects) 2 - By use OneClickMake (Quick way).
 
 ## 1 - By use Makefile
 
@@ -118,14 +124,9 @@ However feel free to use your favorite IDE tools if you wish.
 
 ### compilation/Install
 
-This procedure is going to compile and Install it at same time.
+This procedure is going to compile and Install software at same time.
 
 **Note**: There is no *clear*, *uninstall* targets in this `OneClickMake` file yet.
-
-**Note 2**: If you are using Windows OS as build machine, I suggest you rename the 'make' tools binary for call it 'make'. This avoid error, once Makefile commands use make tools by invock it by 'make' word.
-
-**Note 3**: Theses Makefiles were tested only in Windows and GNU/Linux (Debian Like) Operation Systems.
-
 
 To *compile* and *install* this software, just type:
 
