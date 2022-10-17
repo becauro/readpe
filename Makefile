@@ -22,7 +22,7 @@ all: $(OS_LIB_LOCAL)/libpetest$(LIB_EXT)
 
 $(OS_LIB_LOCAL)/libpetest$(LIB_EXT): lib/libpetest$(LIB_EXT)
 	
-	gcc -o readpe$(BIN_EXT)  readpe_libless.c
+	gcc -o readpe$(BIN_EXT) readpe.c -L lib -lpetest
 	
 lib/libpetest$(LIB_EXT):
 
