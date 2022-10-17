@@ -16,14 +16,14 @@ else
 endif
 
 
-all: $(OS_LIB_LOCAL)/libpetest$(LIB_EXT)
-
-	@echo Software Compiling successful
-
-$(OS_LIB_LOCAL)/libpetest$(LIB_EXT): lib/libpetest$(LIB_EXT)
-	
+all: lib/libpetest$(LIB_EXT)
 	gcc -o readpe$(BIN_EXT) readpe.c -L lib -lpetest
-	
+	@echo Software COMPILED successfully
+
 lib/libpetest$(LIB_EXT):
 
 	make -C lib
+
+install:
+	make install -C lib
+	@echo Software INSTALLED successfully

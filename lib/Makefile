@@ -15,16 +15,14 @@ else
 	LIB_EXT = .so
 	OS_LIB_LOCAL = /usr/lib
 	Move_LB_To_OS_Folder =  cp libpetest.so /usr/lib
-endif 
+endif
 
-all: $(OS_LIB_LOCAL)/libpetest$(LIB_EXT)
-	@echo Library Compiling successful
+# Most time these targets are called by the other Makefile
 
-$(OS_LIB_LOCAL)/libpetest$(LIB_EXT): libpetest$(LIB_EXT)
-
-	$(Move_LB_To_OS_Folder)
+all:
+	gcc -shared -fPIC -o libpetest$(LIB_EXT)  petest.c
+	@echo Library COMPILED successfully
 	
-
-libpetest$(LIB_EXT):
-		gcc -shared -fPIC -o libpetest$(LIB_EXT)  petest.c
-		
+install: 
+	$(Move_LB_To_OS_Folder)
+	@echo Library INSTALLED successfully
