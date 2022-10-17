@@ -22,8 +22,15 @@ After compile the software you get the CLI binary to run.
 
 Just run the binary in CLI passing the file path to check.
 
+For example, for verify if putty.exe is a PE file, type:
+
+`./readpe putty.exe` 
+
 
 # Compilation/install manually
+
+**Prerequisites**: You need only 'gcc' tools installed in your build machine. If you use Windows OS, I suggest you achieve that by use [MinGw](https://pt.wikipedia.org/wiki/MinGW) framework; It also works if you have [Cygwin](https://pt.wikipedia.org/wiki/Cygwin) installed.
+However feel free to use your favorite IDE tool to compile that if you wish.
 
 ## Libraries Compilation
 
@@ -74,13 +81,37 @@ This install happen automatically when the library is installed
 
 # Compilation/install automatically
 
-
 Considering 'make' tool is present in your build machine, this can done by two ways: 1 - By use Makefile (like most projects) 2 - By use OneClickMake (Quick way).
 
-**Prerequisites**: You need the 'make' tool installed in your build machine. If you use Windows OS, I suggest you achieve that by use minGW framework; It also works if you have cygwin as well.
+**Prerequisites**: You need the 'make' and 'gcc' tools installed in your build machine. If you use Windows OS, I suggest you achieve that by use [MinGw](https://pt.wikipedia.org/wiki/MinGW) framework; It also works if you have [Cygwin](https://pt.wikipedia.org/wiki/Cygwin) installed.
+However feel free to use your favorite IDE tools if you wish.
+
+
 ## 1 - By use Makefile
 
-**TO DO**
+### compilation
+
+  To *compile* this software, just type:
+
+    `make`
+
+### install
+
+  To *install* this software, just type:
+
+    `make install`
+
+### clear [TO DO]
+
+  To *clear* this software, just type:
+
+    `make clear`
+
+### uninstall [TO DO]
+
+  To *uninstall* this software, just type:
+
+    `make uninstall`
 
 
 ## 2 - By use OneClickMake (Quick way)
@@ -96,6 +127,13 @@ This procedure is going to compile and Install it at same time.
 **Note 3**: Theses Makefiles were tested only in Windows and GNU/Linux (Debian Like) Operation Systems.
 
 
-### cleaning/uninstall
+To *compile* and *install* this software, just type:
 
-**TO DO**
+  `make`
+
+
+### clear/uninstall [TO DO]
+
+To *clear* and *uninstall* this software, just type:
+
+  `make uninstall`
