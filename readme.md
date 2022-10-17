@@ -96,6 +96,9 @@ With prerequisites in place, you can Compile/Install/Clear/Uninstalls automatica
 
 ## 1 - By use Makefile
 
+This procedures is going to compilation, Install, clear and uninstall software in a way it is in most project out there.
+That means to follow the build process in known separate steps.
+
 ### compilation
 
   To *compile* this software, just type:
@@ -123,11 +126,11 @@ With prerequisites in place, you can Compile/Install/Clear/Uninstalls automatica
 
 ## 2 - By use OneClickMake (Quick way)
 
+This procedures is going to compilation/Install or clear/uninstall software at same time.
+This a way I made to save time.
+
 ### compilation/Install
 
-This procedure is going to compile and Install software at same time.
-
-**Note**: There is no *clear*, *uninstall* targets in this `OneClickMake` file yet.
 
 To *compile* and *install* this software, just type:
 
