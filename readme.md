@@ -146,8 +146,8 @@ To *clear* and *uninstall* this software, just type:
 
 # Other informations
 
-The readpe_libless means the same project without library.
-For now that is here but I intend move to a separate repositoty soon. Ignore it please.
+The readpe_libless folder means has this same project except it is without library.
+For now that is here but I intend move it to a separate repositoty soon. Ignore it please.
 
 -------
 
