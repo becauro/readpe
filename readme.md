@@ -16,7 +16,8 @@ After compile the software you get the CLI binary to run.
 ## Files for test
   
   **Note 1**: There is a Putty.exe binary for test, as it is PE type.
-  **Note 2**: There is also file.txt for test, as it is not PE type but is 32 bytes.
+
+  **Note 2**: There is also file.txt for test, as it is not PE type and have 32 bytes (the minimal size this sofware ask for).
 
 ## How to run the software
 
@@ -27,7 +28,7 @@ For example, for verify if putty.exe is a PE file, type:
 `./readpe putty.exe` 
 
 
-# Compile/Install/Clear/Uninstall manually
+# Compile/Install/Clear/Uninstall MANUALLY
 
 In this section, we gonna consider Compile/Install/Clear/Uninstall procedures by use 'gcc' tools, however feel free to use your favorite IDE or other tools to achieve that.
 
@@ -82,7 +83,7 @@ However, make sure that you already compiled the petest library and put it insid
 This install happen automatically when the library is installed
 
 
-# Compile/Install/Clear/Uninstall automatically
+# Compile/Install/Clear/Uninstall AUTOMATICALLY
 
 In this section, we gonna consider Compile/Install/Clear/Uninstall procedures by use 'make' and 'gcc' tools, however feel free to use your favorite IDE or other tools to achieve that.
 
