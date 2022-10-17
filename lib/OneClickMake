@@ -1,6 +1,5 @@
 OSFLAG :=
 LIB_EXT :=
-
 OS_LIB_LOCAL :=
 Move_LB_To_OS_Folder :=
 
@@ -9,7 +8,6 @@ ifeq ($(OS),Windows_NT)
 	LIB_EXT = .dll
 	OS_LIB_LOCAL = C:/Windows/System32
 	Move_LB_To_OS_Folder := copy libpetest.dll C:\Windows\System32
-
 else
 	OSFLAG = Linux
 	LIB_EXT = .so
@@ -17,14 +15,17 @@ else
 	Move_LB_To_OS_Folder =  cp libpetest.so /usr/lib
 endif 
 
+# TARGETS
+
 all: $(OS_LIB_LOCAL)/libpetest$(LIB_EXT)
-	@echo Library Compiling successful
+	@echo Library COMPILED/INSTALLED successful
 
 $(OS_LIB_LOCAL)/libpetest$(LIB_EXT): libpetest$(LIB_EXT)
-
 	$(Move_LB_To_OS_Folder)
-	
 
 libpetest$(LIB_EXT):
-		gcc -shared -fPIC -o libpetest$(LIB_EXT)  petest.c
-		
+	gcc -shared -fPIC -o libpetest$(LIB_EXT)  petest.c
+
+uninstall:
+	[TO DO]
+	@echo Software CLEAN/UNINSTALLED successfully
