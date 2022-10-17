@@ -129,7 +129,7 @@ This procedure is going to compile and Install it at same time.
 
 To *compile* and *install* this software, just type:
 
-  `make`
+  `make -f OneClickMake`
 
 
 ### clear/uninstall [TO DO]
