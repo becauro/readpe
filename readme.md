@@ -11,8 +11,6 @@ For now, since Make compiling implementation is totally finished yet, you can MA
 
 After compile the software you get the CLI binary to run.
 
-**Note**: I susgest you run this as Privilege ELevation (Admin for Windows)
-
 ## Files for test
   
   **Note 1**: There is a Putty.exe binary for test, as it is PE type.
@@ -34,7 +32,10 @@ In this section, we gonna consider Compile/Install/Clear/Uninstall procedures by
 
 **Prerequisites**: You need only 'gcc' tools installed in your build machine. If you use Windows OS, I suggest you achieve that by use [MinGw](https://pt.wikipedia.org/wiki/MinGW) framework; It also works if you have [Cygwin](https://pt.wikipedia.org/wiki/Cygwin) installed.
 
-With prerequisites in place, you can Compile/Install/Clear/Uninstalls manually as following.
+
+**Note**: I suggest you run these procedures as Elevated Privileges (by use 'sudo', root, Admin (for Windows) or whatever...)
+
+With that in place, you can Compile/Install/Clear/Uninstalls manually as following.
 
 ## Libraries Compilation
 
@@ -90,9 +91,11 @@ In this section, we gonna consider Compile/Install/Clear/Uninstall procedures by
 **Prerequisites**: You need the 'make' and 'gcc' tools installed in your build machine. If you use Windows OS, I suggest you achieve that by use [MinGw](https://pt.wikipedia.org/wiki/MinGW) framework; It also works if you have [Cygwin](https://pt.wikipedia.org/wiki/Cygwin) installed.
 
 
-**Note**: If you are using Windows OS as build machine, I suggest you rename the 'make' tools binary for call it 'make'. This avoid error, once Makefile commands use make tools by invock it by use 'make' word.
+**Note 1**: If you are using Windows OS as build machine, I suggest you rename the 'make' tools binary for call it 'make'. This avoid error, once Makefile commands use make tools by invock it by use 'make' word.
 
-With prerequisites in place, you can Compile/Install/Clear/Uninstalls automatically by two ways: 1 - By use Makefile (like most projects) 2 - By use OneClickMake (Quick way).
+**Note 2**: I suggest you run these procedures as Elevated Privileges (by use 'sudo', root, Admin (for Windows) or whatever...)
+
+With that in place, you can Compile/Install/Clear/Uninstalls automatically by two ways: 1 - By use Makefile (like most projects) 2 - By use OneClickMake (Quick way).
 
 ## 1 - By use Makefile
 
