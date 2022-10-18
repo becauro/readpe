@@ -1,38 +1,33 @@
 OSFLAG :=
 BIN_EXT :=
-LIB_EXT :=
-OS_LIB_LOCAL :=
+Clean_Binary :=
 
 ifeq ($(OS),Windows_NT)
 	OSFLAG = Windows
 	BIN_EXT = .exe
-	LIB_EXT = .dll
-	OS_LIB_LOCAL = C:/Windows/System32
+	Clean_Binary = del readpe.exe
 else
 	OSFLAG = Linux
-	LIB_EXT = .so
-	OS_LIB_LOCAL = /usr/lib
+	Clean_Binary = rm readpe
 endif
 
-# TARGE 'all' Wrong MODE
-
-all: lib/libpetest$(LIB_EXT)
+# all
+all: install # Uncomment it and comment the above line if you want to BUILD libraries as well
 	gcc -o readpe$(BIN_EXT) readpe.c -L lib -lpetest
-	@echo Software COMPILED successfully
+	@echo Software BUILDED successfully
 
-lib/libpetest$(LIB_EXT):
-	make -C lib
-
-install:
+install: # This target BUILD (compile and Install) libraries
+	make -C lib 
 	make install -C lib
-	@echo Software INSTALLED successfully
 
-clear:
-	[TO DO]
+# clean:
+clean: clean_lib # Uncomment it and commnet the above line if you want to clean libraries as well 
+	$(Clean_Binary)
 	@echo Software CLEAN successfully
 
-uninstall:
-	[TO DO]
+clean_lib: # This target clean libraries
+	make clean -C lib
+
+uninstall: # This just uninstall libraries for now
+	make uninstall -C lib
 	@echo Software UNINSTALLED successfully
-
-
