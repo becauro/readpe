@@ -152,6 +152,10 @@ To *clear* and *uninstall* this software, just type:
 The readpe_libless folder means has this same project except it is without library.
 For now that is here but I intend move it to a separate repositoty soon. Ignore it please.
 
+# References
+
+[Programação Moderna em C](https://github.com/mentebinaria/prog_moderna_c).
+
 -------
 
 Feel free to contribute with this project. 
