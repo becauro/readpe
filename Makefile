@@ -14,6 +14,7 @@ else
 	OS_LIB_LOCAL = /usr/lib
 endif
 
+# TARGE 'all' Wrong MODE
 
 all: lib/libpetest$(LIB_EXT)
 	gcc -o readpe$(BIN_EXT) readpe.c -L lib -lpetest

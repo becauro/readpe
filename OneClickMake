@@ -14,17 +14,18 @@ else
 	OS_LIB_LOCAL = /usr/lib
 endif
 
-# TARGETS
-
-all: $(OS_LIB_LOCAL)/libpetest$(LIB_EXT)
-	@echo Software COMPILED/INSTALLED successfully
-
-$(OS_LIB_LOCAL)/libpetest$(LIB_EXT): lib/libpetest$(LIB_EXT)
+all: install
 	gcc -o readpe$(BIN_EXT) readpe.c -L lib -lpetest
-	
-lib/libpetest$(LIB_EXT):
-	make -C lib -f OneClickMake
+	@echo Software BUILDED successfully
+
+install:
+	make -C lib 
+	make install -C lib
+
+clear:
+	[TO DO]
+	@echo Software CLEAN successfully
 
 uninstall:
 	[TO DO]
-	@echo Software CLEAN/UNINSTALLED successfully
+	@echo Software UNINSTALLED successfully
