@@ -1,18 +1,18 @@
 OSFLAG :=
 LIB_EXT :=
 Move_LB_To_OS_Folder :=
-Remove_Library :=
+Clean_Library :=
 
 ifeq ($(OS),Windows_NT)
 	OSFLAG = Windows
 	LIB_EXT = .dll
 	Move_LB_To_OS_Folder := copy libpetest.dll C:\Windows\System32
-	Remove_Library = del libpetest.dll
+	Clean_Library = del libpetest.dll
 else
 	OSFLAG = Linux
 	LIB_EXT = .so
 	Move_LB_To_OS_Folder =  cp libpetest.so /usr/lib
-	Remove_Library = rm libpetest.so
+	Clean_Library = rm libpetest.so
 endif
 
 # Most time these targets are called by the other Makefile
@@ -25,8 +25,8 @@ install:
 	$(Move_LB_To_OS_Folder)
 	@echo Library INSTALLED successfully
 
-clear:
-	$(Remove_Library)
+clean:
+	$(Clean_Library)
 	@echo Library CLEAN successfully
 
 uninstall:
