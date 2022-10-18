@@ -1,17 +1,14 @@
 OSFLAG :=
 BIN_EXT :=
-LIB_EXT :=
-OS_LIB_LOCAL :=
+Remove_Binary :=
 
 ifeq ($(OS),Windows_NT)
 	OSFLAG = Windows
 	BIN_EXT = .exe
-	LIB_EXT = .dll
-	OS_LIB_LOCAL = C:/Windows/System32
+	Remove_Binary = del readpe.exe
 else
 	OSFLAG = Linux
-	LIB_EXT = .so
-	OS_LIB_LOCAL = /usr/lib
+	Remove_Binary = rm readpe
 endif
 
 all: install
@@ -23,7 +20,8 @@ install:
 	make install -C lib
 
 clear:
-	[TO DO]
+	make clear -C lib
+	$(Remove_Binary)
 	@echo Software CLEAN successfully
 
 uninstall:
