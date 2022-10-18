@@ -28,6 +28,6 @@ clean: clean_lib # Uncomment it and commnet the above line if you want to clean 
 clean_lib: # This target clean libraries
 	make clean -C lib
 
-uninstall:
-	[TO DO]
+uninstall: # This just uninstall libraries for now
+	make uninstall -C lib
 	@echo Software UNINSTALLED successfully

@@ -4,10 +4,10 @@
 void isPE(const unsigned char *buffer) {
 
   if(buffer[0] != 'M' || buffer[1] != 'Z'){
-    printf("Humm, This file is NOT a PE\n");
+    printf("This file is NOT a PE\n");
     exit(1);
   }
 
-  printf("Wow, This is a PE file\n");
+  printf("This is a PE file\n");
   
 }
