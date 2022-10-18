@@ -26,16 +26,16 @@ For example, for verify if putty.exe is a PE file, type:
 `./readpe putty.exe` 
 
 
-# Compile/Install/Clear/Uninstall MANUALLY
+# Compile/Install/Clean/Uninstall MANUALLY
 
-In this section, we gonna consider Compile/Install/Clear/Uninstall procedures by use 'gcc' tools, however feel free to use your favorite IDE or other tools to achieve that.
+In this section, we gonna consider Compile/Install/Clean/Uninstall procedures by use 'gcc' tools, however feel free to use your favorite IDE or other tools to achieve that.
 
 **Prerequisites**: You need only 'gcc' tools installed in your build machine. If you use Windows OS, I suggest you achieve that by use [MinGw](https://pt.wikipedia.org/wiki/MinGW) framework; It also works if you have [Cygwin](https://pt.wikipedia.org/wiki/Cygwin) installed.
 
 
 **Note**: I suggest you run these procedures as Elevated Privileges (by use 'sudo', root, Admin (for Windows) or whatever...)
 
-With that in place, you can Compile/Install/Clear/Uninstalls manually as following.
+With that in place, you can Compile/Install/Clean/Uninstalls manually as following.
 
 ## Libraries Compilation
 
@@ -84,9 +84,9 @@ However, make sure that you already compiled the petest library and put it insid
 This install happen automatically when the library is installed
 
 
-# Compile/Install/Clear/Uninstall AUTOMATICALLY
+# Compile/Install/Clean/Uninstall AUTOMATICALLY
 
-In this section, we gonna consider Compile/Install/Clear/Uninstall procedures by use 'make' and 'gcc' tools, however feel free to use your favorite IDE or other tools to achieve that.
+In this section, we gonna consider Compile/Install/Clean/Uninstall procedures by use 'make' and 'gcc' tools, however feel free to use your favorite IDE or other tools to achieve that.
 
 **Prerequisites**: You need the 'make' and 'gcc' tools installed in your build machine. If you use Windows OS, I suggest you achieve that by use [MinGw](https://pt.wikipedia.org/wiki/MinGW) framework; It also works if you have [Cygwin](https://pt.wikipedia.org/wiki/Cygwin) installed.
 
@@ -95,12 +95,12 @@ In this section, we gonna consider Compile/Install/Clear/Uninstall procedures by
 
 **Note 2**: I suggest you run these procedures as Elevated Privileges (by use 'sudo', root, Admin (for Windows) or whatever...)
 
-With that in place, you can Compile/Install/Clear/Uninstalls automatically by two ways: 1 - By use Makefile (like most projects) 2 - By use OneClickMake (Quick way).
+With that in place, you can Compile/Install/Clean/Uninstalls automatically by two ways: 1 - By use Makefile (like most projects) 2 - By use Makefile modified (Quick way); it's **default way** in this project.
 
 ## 1 - By use Makefile
 
-This procedures is going to compilation, Install, clear and uninstall software in a way it is in most project out there.
-That means to follow the build process in known separate steps.
+This procedures is going to compilation, Install, clean and uninstall software.
+The same apply to any library when it has a Makefile file as well.
 
 ### compilation
 
@@ -114,43 +114,52 @@ That means to follow the build process in known separate steps.
 
     `make install`
 
-### clear [TO DO]
+### clean
 
-  To *clear* this software, just type:
+  To *clean* this software, just type:
 
-    `make clear`
+    `make clean`
 
-### uninstall [TO DO]
+### uninstall
 
   To *uninstall* this software, just type:
 
     `make uninstall`
 
 
-## 2 - By use OneClickMake (Quick way)
+## 2 - By use Makefile modified (Quick way)
 
-This procedures is going to compilation/Install or clear/uninstall software at same time.
-This a way I made to save time.
+This procedures consist to compilation/Install and clean/uninstall software by *including the libraries* in this process.
+This is a way I made to save time and that is the default way enabled in Makefile.
+You can read the Makefile comments, they are marked every point about this mode. 
 
 ### compilation/Install
 
 
-To *compile* and *install* this software, just type:
+To *compile* and to *install* this software, including to *compile* and to *install* the libraries, just keep `all: install` target uncommented in Makefile, then type the following command:
 
-  `make -f OneClickMake`
+  `make`
 
 
-### clear/uninstall [TO DO]
+### clean
 
-To *clear* and *uninstall* this software, just type:
+To *clean* this software,  including to *clean* the libraries, just keep `clean: clean_lib` target uncommented in Makefile, then type the following command:
+
+  `make clean`
+
+
+### uninstall
+
+To *uninstall* this software,  we just have to *uninstall* the libraries, that means this `uninstall` target actually run the library Makefile `uninstall` target, then type the following command:
 
   `make uninstall`
 
 
+
 # Other informations
 
-The readpe_libless folder means has this same project except it is without library.
-For now that is here but I intend move it to a separate repositoty soon. Ignore it please.
+The readpe_libless folder has this same project, except it is implemented without libraries.
+For now that folder is here, but I intend move it to a separate repositoty sooner. So ignore it please.
 
 # References
 
