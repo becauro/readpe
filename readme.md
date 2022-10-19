@@ -2,9 +2,7 @@
 
 This project is small program to read a binary file and indentify if this is a PE (Portable Executable) binary.
 
-For now, since Make compiling implementation is totally finished yet, you can MANUALLY compiling the code by take the following instructs.
-
-**Note**: Theses project was tested only in Windows and GNU/Linux (Debian 'like') Operation Systems. But I think is not so hard to build under/for other Unix 'like' Operation Systems, like MacOS for example.
+**Note**: Theses project was tested only in Windows and GNU/Linux (Debian 'like') Operation Systems. But I think is not so hard to build under/for other Unix 'like' Operation Systems too, like MacOS.
 
 
 # How to use the software
